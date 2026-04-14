@@ -1,8 +1,8 @@
 # 📝 AbsenMagang
 
 <p align="center">
-  <b>Portal Absensi Mahasiswa Magang Berbasis Web</b><br>
-  <i>Dibangun dengan PHP OOP (MVC Architecture)</i>
+  <strong>Portal Absensi Mahasiswa Magang Berbasis Web</strong><br>
+  <em>Dibangun dengan PHP OOP dan MVC Architecture</em>
 </p>
 
 <p align="center">
@@ -17,36 +17,98 @@
 
 ## 📌 Tentang Project
 
-AbsenMagang adalah sistem absensi berbasis web yang dirancang untuk mendigitalisasi proses kehadiran mahasiswa magang di lingkungan Dinas Kehutanan Provinsi Sumatera Barat.
+AbsenMagang adalah sistem absensi berbasis web yang memudahkan pencatatan kehadiran mahasiswa magang di Dinas Kehutanan Provinsi Sumatera Barat.
 
-Sistem ini dibangun menggunakan pendekatan modern:
+Sistem ini dibangun dengan pendekatan:
 
 - Object-Oriented Programming (OOP)
 - MVC Architecture (Model - View - Controller)
-- Responsive Design
-- Clean UI / UX
+- Desain responsif
+- UI/UX yang sederhana dan mudah digunakan
 
-Tujuan utama sistem:
+Tujuan utama:
 
 - Meningkatkan efisiensi administrasi
 - Mengurangi kesalahan pencatatan manual
-- Mempermudah monitoring absensi secara real-time
+- Mempercepat monitoring absensi secara realtime
 
 ---
 
-## 🎯 Tujuan Sistem
+## 📚 Daftar Isi
 
-- Digitalisasi sistem absensi manual
-- Meningkatkan kedisiplinan mahasiswa
-- Menyediakan data yang akurat & terstruktur
-- Mempermudah pekerjaan admin
-- Monitoring kehadiran secara real-time
+- [Fitur Utama](#-fitur-utama)
+- [Arsitektur Sistem](#-arsitektur-sistem)
+- [UI / UX Design](#-ui--ux-design)
+- [Preview Sistem](#-preview-sistem)
+- [Teknologi yang Digunakan](#-teknologi-yang-digunakan)
+- [Struktur Folder](#-struktur-folder)
+- [Instalasi](#-instalasi)
+- [Penggunaan](#-penggunaan)
+- [Konfigurasi Waktu Absensi](#-konfigurasi-waktu-absensi)
+- [Keamanan Sistem](#-keamanan-sistem)
+- [Pengembangan Mendatang](#-pengembangan-mendatang)
+- [Kontributor](#-kontributor)
+- [Dukungan](#-dukungan)
+
+---
+
+## 🎯 Fitur Utama
+
+### 👤 Portal Mahasiswa
+
+- 🔐 Registrasi dan login aman
+- 📊 Dashboard kehadiran interaktif
+- ⚡ Tombol absen cepat (Quick Presence)
+- 📜 Riwayat absensi harian
+- 📘 Informasi jam operasional
+
+> Mahasiswa bisa absen dengan satu klik, lalu sistem otomatis menilai status on-time atau terlambat.
+
+### 🛡️ Panel Admin
+
+- 📈 Statistik absensi real-time
+- 👥 Manajemen data mahasiswa (CRUD)
+- 🕒 Laporan log absensi
+- 🏷️ Pengaturan status mahasiswa
+
+> Admin dapat melihat ringkasan aktivitas absensi dan mengelola data peserta magang dengan mudah.
+
+### ✨ Fitur Interaktif
+
+- Navigasi dashboard yang cepat dan responsif
+- Pesan notifikasi status absen
+- Validasi jam hadir otomatis
+- Tabel data yang mudah dibaca
+
+---
+
+## 🏗️ Arsitektur Sistem
+
+Sistem ini menggunakan arsitektur MVC:
+
+- **Controller**: mengatur alur aplikasi dan menangani request/response
+- **Model**: menerapkan query database dan logika data
+- **View**: menyajikan tampilan HTML, CSS, dan JavaScript
+
+Alur singkat:
+
+User → Controller → Model → View → User
+
+---
+
+## 🎨 UI / UX Design
+
+Konsep desain:
+
+- Tampilan modern dan bersih
+- Dominasi warna hijau (#198754)
+- Layout berbasis card
+- Responsif untuk desktop dan mobile
+- Navigasi sederhana dan intuitif
 
 ---
 
 ## 🖼️ Preview Sistem
-
-Contoh penggunaan:
 
 <p align="center">
   <img src="public/img/preview/dashboard-admin.png" width="80%">
@@ -56,162 +118,96 @@ Contoh penggunaan:
 
 ---
 
-## 🏗️ Arsitektur Sistem (OOP - MVC)
-
-Controller:
-
-- Mengatur alur aplikasi
-- Menangani request & response
-
-Model:
-
-- Mengelola database
-- Menjalankan query SQL
-
-View:
-
-- Menampilkan UI
-- Berisi HTML, CSS, JavaScript
-
-Alur sederhana:
-User → Controller → Model → View → User
-
----
-
-## 🚀 Fitur Utama
-
-### 👤 Portal Mahasiswa
-
-- 🔐 Registrasi & Login
-- 📊 Dashboard Kehadiran
-- ⚡ Quick Presence (Absen Sekarang)
-- 📜 Riwayat Absensi
-- 📘 Informasi jam operasional
-
-Detail:
-Mahasiswa dapat melakukan absensi dengan satu klik dan sistem akan otomatis memvalidasi waktu kehadiran.
-
----
-
-### 🛡️ Panel Admin
-
-- 📈 Statistik Real-time
-- 👥 CRUD Data Mahasiswa
-- 🕒 Monitoring Log Absensi
-- 🏷️ Status Mahasiswa
-
-Detail:
-Admin dapat melihat seluruh aktivitas absensi dan mengelola data mahasiswa secara penuh.
-
----
-
-## 🎨 UI / UX Design
-
-Konsep desain:
-
-- Modern Clean Design
-- Dominasi warna hijau (#198754)
-- Card-based layout
-- Responsive design
-- Navigasi sederhana
-
----
-
 ## 🛠️ Teknologi yang Digunakan
 
-Backend:
-
-- PHP (OOP)
-
-Database:
-
-- MySQL
-
-Frontend:
-
-- HTML5
-- CSS3
-- JavaScript
-
-Styling:
-
-- Bootstrap 5
-- Custom CSS
+- Backend: PHP (OOP)
+- Database: MySQL
+- Frontend: HTML5, CSS3, JavaScript
+- Styling: Bootstrap 5, custom CSS
 
 ---
 
 ## 📁 Struktur Folder
 
 <pre>
-absenmagang/
+absenmagang-php-mvc/
 ├── app/
-│ ├── config/
-│ ├── controllers/
-│ │ ├── admin/
-│ │ └── intern/
-│ ├── core/
-│ ├── models/
-│ └── views/
-│ ├── admin/
-│ ├── auth/
-│ ├── intern/
-│ └── templates/
-│
+│   ├── config/
+│   ├── controllers/
+│   │   ├── admin/
+│   │   └── intern/
+│   ├── core/
+│   ├── models/
+│   └── views/
+│       ├── admin/
+│       ├── auth/
+│       ├── intern/
+│       └── templates/
 └── public/
-├── css/
-├── js/
-└── img/
+    ├── css/
+    ├── img/
+    │   └── preview/
+    └── js/
 </pre>
 
 ---
 
 ## ⚙️ Instalasi
 
-1. Clone Repository
-   git clone https://github.com/username/absenmagang.git
+1. Clone repository:
+   ```bash
+   git clone https://github.com/<username>/absenmagang-php-mvc.git
+   ```
+2. Pindahkan folder ke `htdocs` atau `www` pada XAMPP.
+3. Buat database baru dan import file SQL jika tersedia.
+4. Sesuaikan konfigurasi database di `app/config/config.php`.
+5. Buka aplikasi di browser:
+   ```
+   http://localhost/absenmagang-php-mvc
+   ```
 
-2. Konfigurasi Database
-   - Buat database: absen_magang
-   - Import file SQL
-   - Sesuaikan config.php
+---
 
-3. Jalankan Project
-   - Pindahkan ke htdocs / www
-   - Akses:
-     http://localhost/absenmagang
+## ▶️ Penggunaan
+
+1. Akses halaman login di browser.
+2. Login sebagai admin atau mahasiswa.
+3. Untuk mahasiswa, gunakan menu "Absensi" dan tekan tombol absen.
+4. Untuk admin, buka dashboard untuk melihat statistik dan riwayat data.
+5. Gunakan menu CRUD untuk menambah, mengubah, atau menghapus data mahasiswa.
 
 ---
 
 ## ⏰ Konfigurasi Waktu Absensi
 
-- Absen Dibuka : 07:00 WIB
-- Tepat Waktu : ≤ 08:00 WIB
-- Absen Ditutup : 16:00 WIB
+- Absen dibuka : 07:00 WIB
+- Tepat waktu : ≤ 08:00 WIB
+- Absen ditutup : 16:00 WIB
 
 ---
 
 ## 🔐 Keamanan Sistem
 
-- Session Authentication
-- Validasi input
-- Role-based access
+- Autentikasi sesi (session authentication)
+- Validasi input dari user
+- Proteksi akses berdasarkan role
 - Proteksi file penting
 
 ---
 
-## 🚀 Pengembangan Selanjutnya
+## 🚀 Pengembangan Mendatang
 
-- QR Code Absensi
-- GPS Tracking
-- Export PDF / Excel
+- QR Code absensi
+- GPS tracking
+- Export laporan ke PDF / Excel
 - Notifikasi WhatsApp
 
 ---
 
 ## 👨‍💻 Kontributor
 
-- Randa (Backend Developer)
-- Angga (Frontend & UI/UX)
+- Randa — Backend Developer
+- Angga — Frontend & UI/UX
 
 ---
 
@@ -228,5 +224,3 @@ Jika project ini membantu:
 - Berikan ⭐ pada repository
 - Fork untuk pengembangan
 - Gunakan sebagai referensi
-
----
