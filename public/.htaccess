@@ -1,0 +1,12 @@
+Options -Indexes -MultiViews
+
+RewriteEngine On
+
+# Mencegah akses langsung ke folder index.php jika user mengetik /index.php
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php\ HTTP/
+RewriteRule ^index\.php$ / [L,R=301]
+
+# Cek apakah file atau folder fisik ada, jika tidak ada, lempar ke index.php
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php?url=$1 [L,QSA]

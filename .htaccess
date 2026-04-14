@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # 1. Jika user akses localhost/TOKO/ langsung, arahkan ke public/
+    RewriteRule ^$ public/ [L]
+
+    # 2. Jika user akses localhost/TOKO/apa-saja, arahkan ke public/apa-saja
+    # Tapi abaikan jika URL sudah mengandung /public/ (agar tidak looping)
+    RewriteCond %{REQUEST_URI} !^/public/
+    RewriteRule ^(.*)$ public/$1 [L]
+
+</IfModule>
