@@ -46,11 +46,6 @@ Tujuan utama sistem:
 
 ## 🖼️ Preview Sistem
 
-Tambahkan screenshot untuk meningkatkan daya tarik:
-
-Folder:
-public/img/preview/
-
 Contoh penggunaan:
 
 <p align="center">
